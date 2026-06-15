@@ -12,6 +12,15 @@ import CartView from './views/CartView';
 import UserDashboard from './views/UserDashboard';
 import AdminDashboard from './views/AdminDashboard';
 
+const APP_DATA_VERSION = 'v2-india-cities';
+
+// Clear stale localStorage data when app version changes
+if (localStorage.getItem('rentease_data_version') !== APP_DATA_VERSION) {
+  ['rentease_products', 'rentease_service_areas', 'rentease_orders',
+   'rentease_tickets', 'rentease_users'].forEach(k => localStorage.removeItem(k));
+  localStorage.setItem('rentease_data_version', APP_DATA_VERSION);
+}
+
 const MainAppContent = () => {
   // Routing State
   const [currentView, setCurrentView] = useState('home');

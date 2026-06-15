@@ -9,8 +9,8 @@ const DEFAULT_USERS = [
     email: 'admin@rentease.com',
     password: 'admin123',
     role: 'admin',
-    phone: '+1 (555) 019-2834',
-    city: 'New York'
+    phone: '+91 99001 88234',
+    city: 'Bangalore'
   },
   {
     id: 'user-renter',
@@ -18,8 +18,8 @@ const DEFAULT_USERS = [
     email: 'user@example.com',
     password: 'user123',
     role: 'renter',
-    phone: '+1 (555) 014-9821',
-    city: 'New York'
+    phone: '+91 98765 43210',
+    city: 'Bangalore'
   }
 ];
 
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
     return { success: false, message: 'Invalid email or password' };
   };
 
-  const signup = (name, email, password, role = 'renter', phone = '', city = 'New York') => {
+  const signup = (name, email, password, role = 'renter', phone = '', city = 'Bangalore') => {
     if (users.some(u => u.email.toLowerCase() === email.toLowerCase())) {
       return { success: false, message: 'Email already registered' };
     }

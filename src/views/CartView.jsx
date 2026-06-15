@@ -21,7 +21,7 @@ export const CartView = ({ navigate }) => {
 
   // Checkout Form State
   const [address, setAddress] = useState('');
-  const [city, setCity] = useState(serviceAreas[0] || 'New York');
+  const [city, setCity] = useState(serviceAreas[0] || 'Bangalore');
   const [zipCode, setZipCode] = useState('');
   const [deliveryDate, setDeliveryDate] = useState('');
   const [deliverySlot, setDeliverySlot] = useState('10 AM - 1 PM');
@@ -213,7 +213,7 @@ export const CartView = ({ navigate }) => {
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {cart.map(item => (
                   <div key={item.id} className="cart-item-row">
-                    <ProductImage subCategory={item.product.subCategory} style={{ height: '70px', padding: '5px' }} />
+                    <ProductImage subCategory={item.product.subCategory} productId={item.product.id} style={{ height: '70px', padding: '5px' }} />
                     <div>
                       <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '4px' }}>
                         {item.product.name}
@@ -346,7 +346,7 @@ export const CartView = ({ navigate }) => {
                     <label className="form-label">Street Address</label>
                     <input 
                       type="text" 
-                      placeholder="123 Main St, Apt 4A" 
+                      placeholder="Flat 4B, MG Road, Indiranagar" 
                       className="form-control"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
@@ -372,8 +372,8 @@ export const CartView = ({ navigate }) => {
                       <label className="form-label">ZIP Code</label>
                       <input 
                         type="text" 
-                        maxLength="5" 
-                        placeholder="10001" 
+                        maxLength="6" 
+                        placeholder="560001" 
                         className="form-control"
                         value={zipCode}
                         onChange={(e) => setZipCode(e.target.value)}
@@ -413,7 +413,7 @@ export const CartView = ({ navigate }) => {
                     <label className="form-label">Contact Phone Number</label>
                     <input 
                       type="tel" 
-                      placeholder="+1 (555) 000-0000" 
+                      placeholder="+91 98765 43210" 
                       className="form-control"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}

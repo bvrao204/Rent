@@ -84,12 +84,20 @@ const INITIAL_PRODUCTS = [
 ];
 
 const INITIAL_SERVICE_AREAS = [
-  'New York',
-  'Los Angeles',
-  'Chicago',
-  'San Francisco',
-  'Seattle',
-  'Boston'
+  'Bangalore',
+  'Mumbai',
+  'Delhi NCR',
+  'Hyderabad',
+  'Pune',
+  'Chennai',
+  'Kolkata',
+  'Jaipur',
+  'Ahmedabad',
+  'Surat',
+  'Kochi',
+  'Chandigarh',
+  'Indore',
+  'Nagpur'
 ];
 
 const INITIAL_ORDERS = [
@@ -98,20 +106,20 @@ const INITIAL_ORDERS = [
     userId: 'user-renter',
     userName: 'Alex Johnson',
     userEmail: 'user@example.com',
-    userPhone: '+1 (555) 014-9821',
+    userPhone: '+91 98765 43210',
     productId: 'prod-2',
     productName: 'Urban Comfort 3-Seater Sofa',
     productCategory: 'furniture',
     productSubCategory: 'sofa',
-    monthlyRent: 29, // 6 months option (base 24 + premium)
+    monthlyRent: 29,
     securityDeposit: 79,
     tenureMonths: 6,
     status: 'active',
     deliveryDate: '2026-06-01',
     deliverySlot: '10 AM - 1 PM',
-    address: '102 Greene St, Apt 4B',
-    city: 'New York',
-    zipCode: '10012',
+    address: '14, MG Road, Apt 4B',
+    city: 'Bangalore',
+    zipCode: '560001',
     startDate: '2026-06-01',
     endDate: '2026-12-01',
     createdAt: '2026-05-28T14:30:00.000Z'
@@ -121,20 +129,20 @@ const INITIAL_ORDERS = [
     userId: 'user-renter',
     userName: 'Alex Johnson',
     userEmail: 'user@example.com',
-    userPhone: '+1 (555) 014-9821',
+    userPhone: '+91 98765 43210',
     productId: 'prod-4',
     productName: 'FrostFree Double Door Refrigerator (240L)',
     productCategory: 'appliance',
     productSubCategory: 'fridge',
-    monthlyRent: 35, // 12 months option (base 35)
+    monthlyRent: 35,
     securityDeposit: 120,
     tenureMonths: 12,
     status: 'pending-delivery',
     deliveryDate: '2026-06-20',
     deliverySlot: '2 PM - 5 PM',
-    address: '102 Greene St, Apt 4B',
-    city: 'New York',
-    zipCode: '10012',
+    address: '14, MG Road, Apt 4B',
+    city: 'Bangalore',
+    zipCode: '560001',
     startDate: '2026-06-20',
     endDate: '2027-06-20',
     createdAt: '2026-06-12T09:15:00.000Z'

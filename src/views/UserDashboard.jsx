@@ -27,7 +27,7 @@ export const UserDashboard = ({ navigate }) => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('New York');
+  const [city, setCity] = useState('Bangalore');
   const [authError, setAuthError] = useState('');
 
   // Active view tab inside dashboard
@@ -287,7 +287,7 @@ export const UserDashboard = ({ navigate }) => {
                   {activeRentals.map(rental => (
                     <div key={rental.id} className="glass-card" style={{ cursor: 'default', padding: '20px' }}>
                       <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr auto', gap: '20px', alignItems: 'center' }}>
-                        <ProductImage subCategory={rental.productSubCategory} style={{ height: '70px', padding: '4px' }} />
+                        <ProductImage subCategory={rental.productSubCategory} productId={rental.productId} style={{ height: '70px', padding: '4px' }} />
                         
                         <div>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>

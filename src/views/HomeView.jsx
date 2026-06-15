@@ -268,7 +268,7 @@ export const HomeView = ({ navigate }) => {
               style={{ display: 'flex', flexDirection: 'column', height: '100%', cursor: 'pointer' }}
               onClick={() => navigate('product-detail', { productId: product.id })}
             >
-              <ProductImage subCategory={product.subCategory} />
+              <ProductImage subCategory={product.subCategory} productId={product.id} />
               
               <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                 <span className="badge badge-accent" style={{ alignSelf: 'flex-start', marginBottom: '8px' }}>
@@ -322,7 +322,7 @@ export const HomeView = ({ navigate }) => {
                 </div>
                 <div>
                   <h5 style={{ color: 'var(--text-primary)', fontSize: '0.9rem' }}>Sarah Miller</h5>
-                  <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Software Engineer, New York</p>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Software Engineer, Bangalore</p>
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@ export const HomeView = ({ navigate }) => {
                 </div>
                 <div>
                   <h5 style={{ color: 'var(--text-primary)', fontSize: '0.9rem' }}>James Peterson</h5>
-                  <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Graduate Student, NYU</p>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Graduate Student, IIT Mumbai</p>
                 </div>
               </div>
             </div>

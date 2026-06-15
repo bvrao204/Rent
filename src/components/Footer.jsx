@@ -165,7 +165,7 @@ export const Footer = ({ navigate }) => {
                 </span>
               </li>
               <li>
-                <span onClick={() => alert('Cities: NYC, LA, Chicago, SF, Seattle, Boston')} style={{ cursor: 'pointer' }}>
+                <span onClick={() => alert('Cities: Bangalore, Mumbai, Delhi NCR, Hyderabad, Pune, Chennai, Kolkata, Jaipur, Ahmedabad, Kochi')} style={{ cursor: 'pointer' }}>
                   Coverage Map
                 </span>
               </li>
