@@ -148,7 +148,7 @@ export const CartView = ({ navigate }) => {
               {placedOrders.map(ord => (
                 <div key={ord.id} className="flex-between" style={{ fontSize: '0.85rem', marginTop: '4px' }}>
                   <span>{ord.productName} ({ord.tenureMonths} mo)</span>
-                  <span>${ord.monthlyRent}/mo</span>
+                  <span>₹{ord.monthlyRent}/mo</span>
                 </div>
               ))}
             </div>
@@ -221,8 +221,8 @@ export const CartView = ({ navigate }) => {
                       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontSize: '0.8rem' }}>
                         <span className="badge badge-primary">{item.product.category}</span>
                         <span className="text-muted">Tenure: <strong>{item.tenureMonths} Months</strong></span>
-                        <span className="text-muted">Rent: <strong>${item.monthlyRent}/mo</strong></span>
-                        <span className="text-muted">Deposit: <strong>${item.product.securityDeposit}</strong></span>
+                        <span className="text-muted">Rent: <strong>₹{item.monthlyRent}/mo</strong></span>
+                        <span className="text-muted">Deposit: <strong>₹{item.product.securityDeposit}</strong></span>
                       </div>
                     </div>
                     
@@ -433,16 +433,16 @@ export const CartView = ({ navigate }) => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '20px', fontSize: '0.95rem' }}>
                 <div className="flex-between">
                   <span className="text-muted">Total Monthly Rent:</span>
-                  <span style={{ fontWeight: '600' }}>${totalMonthlyRent}/mo</span>
+                  <span style={{ fontWeight: '600' }}>₹{totalMonthlyRent}/mo</span>
                 </div>
                 <div className="flex-between">
                   <span className="text-muted">Refundable Security Deposit:</span>
-                  <span style={{ fontWeight: '600' }}>${totalDeposit}</span>
+                  <span style={{ fontWeight: '600' }}>₹{totalDeposit}</span>
                 </div>
                 <div className="flex-between" style={{ borderTop: '1px solid var(--border)', paddingTop: '12px', marginTop: '4px' }}>
                   <h4 style={{ fontSize: '1rem' }}>Total Due Today:</h4>
                   <h3 style={{ fontSize: '1.4rem', color: 'var(--primary)', fontWeight: '800' }}>
-                    ${totalDueToday}
+                    ₹{totalDueToday}
                   </h3>
                 </div>
               </div>

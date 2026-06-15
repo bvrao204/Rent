@@ -209,7 +209,7 @@ export const AdminDashboard = ({ navigate }) => {
                   </div>
                   <div>
                     <h5 style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Monthly Revenue (MRR)</h5>
-                    <h2 style={{ fontSize: '1.8rem', fontWeight: '800' }}>${kpi.monthlyRecurringRevenue}</h2>
+                    <h2 style={{ fontSize: '1.8rem', fontWeight: '800' }}>₹{kpi.monthlyRecurringRevenue}</h2>
                   </div>
                 </div>
 
@@ -338,7 +338,7 @@ export const AdminDashboard = ({ navigate }) => {
 
                   <div className="form-row">
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label">Monthly Base Rent ($)</label>
+                      <label className="form-label">Monthly Base Rent (₹)</label>
                       <input 
                         type="number" 
                         className="form-control" 
@@ -350,7 +350,7 @@ export const AdminDashboard = ({ navigate }) => {
                     </div>
 
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label">Security Deposit ($)</label>
+                      <label className="form-label">Security Deposit (₹)</label>
                       <input 
                         type="number" 
                         className="form-control" 
@@ -428,8 +428,8 @@ export const AdminDashboard = ({ navigate }) => {
                             <span className="badge badge-primary">{prod.category}</span>
                             <span className="badge badge-accent" style={{ marginLeft: '4px', fontSize: '0.6rem' }}>{prod.subCategory}</span>
                           </td>
-                          <td>${prod.baseRent}/mo</td>
-                          <td>${prod.securityDeposit}</td>
+                          <td>₹{prod.baseRent}/mo</td>
+                          <td>₹{prod.securityDeposit}</td>
                           <td>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                               <input 
@@ -645,7 +645,7 @@ export const AdminDashboard = ({ navigate }) => {
                       <input 
                         type="text" 
                         required 
-                        placeholder="e.g. Washington DC" 
+                        placeholder="e.g. Mysuru or Vizag" 
                         className="form-control"
                         value={newCity}
                         onChange={(e) => setNewCity(e.target.value)}

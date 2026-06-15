@@ -301,8 +301,8 @@ export const UserDashboard = ({ navigate }) => {
                           </div>
                           
                           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '8px', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                            <span>Monthly Rent: <strong>${rental.monthlyRent}/mo</strong></span>
-                            <span>Security Deposit: <strong>${rental.securityDeposit}</strong></span>
+                            <span>Monthly Rent: <strong>₹{rental.monthlyRent}/mo</strong></span>
+                            <span>Security Deposit: <strong>₹{rental.securityDeposit}</strong></span>
                             <span>Scheduled Delivery: <strong>{rental.deliveryDate} ({rental.deliverySlot})</strong></span>
                             <span>Contract Ends: <strong>{rental.endDate} ({rental.tenureMonths} mo)</strong></span>
                           </div>
@@ -552,7 +552,7 @@ export const UserDashboard = ({ navigate }) => {
                           <td><strong>#{ord.id}</strong></td>
                           <td>{ord.productName}</td>
                           <td>{ord.tenureMonths} mo</td>
-                          <td>${ord.monthlyRent}/mo</td>
+                          <td>₹{ord.monthlyRent}/mo</td>
                           <td>
                             <span className={`badge ${ord.status === 'completed' ? 'badge-success' : 'badge-danger'}`}>
                               {ord.status}

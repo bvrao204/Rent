@@ -69,7 +69,7 @@ export const HomeView = ({ navigate }) => {
             </div>
             <div style={{ width: '1px', background: 'var(--border)' }}></div>
             <div style={{ textAlign: 'center' }}>
-              <h3 style={{ fontSize: '2rem', color: 'var(--primary)', fontFamily: 'Outfit' }}>0$</h3>
+              <h3 style={{ fontSize: '2rem', color: 'var(--primary)', fontFamily: 'Outfit' }}>₹0</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Relocation Fee</p>
             </div>
           </div>
@@ -284,7 +284,7 @@ export const HomeView = ({ navigate }) => {
                   <div>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Rents from</span>
                     <h3 style={{ fontSize: '1.3rem', color: 'var(--primary)', fontWeight: '800' }}>
-                      ${product.baseRent}<span style={{ fontSize: '0.85rem', fontWeight: 'normal' }}>/mo</span>
+                      ₹{product.baseRent}<span style={{ fontSize: '0.85rem', fontWeight: 'normal' }}>/mo</span>
                     </h3>
                   </div>
                   <button className="btn btn-primary btn-sm">Rent Now</button>
@@ -314,7 +314,7 @@ export const HomeView = ({ navigate }) => {
                 <ThumbsUp size={16} /> <ThumbsUp size={16} /> <ThumbsUp size={16} /> <ThumbsUp size={16} /> <ThumbsUp size={16} />
               </div>
               <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '20px', color: 'var(--text-secondary)' }}>
-                "As a software engineer relocating to NY for work, buying furniture was going to cost over $2,000. RentEase solved it. I rent a sofa, TV, and bed for under $80/mo. Relocation support is a lifesaver!"
+                "As a software engineer relocating to Bangalore for work, buying furniture was going to cost over ₹1,50,000. RentEase solved it. I rent a sofa, TV, and bed for under ₹6,000/mo. Relocation support is a lifesaver!"
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--primary)', color: 'white', display: 'flex', alignItems: 'center', justify: 'center', fontWeight: 'bold' }}>

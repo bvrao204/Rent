@@ -176,7 +176,7 @@ export const ProductDetailView = ({ navigate, productId }) => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <h3 style={{ fontSize: '1.25rem', color: 'var(--primary)', fontWeight: 'bold' }}>
-                    ${product.baseRent}<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mo</span>
+                    ₹{product.baseRent}<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mo</span>
                   </h3>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export const ProductDetailView = ({ navigate, productId }) => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', fontWeight: 'bold' }}>
-                    ${Math.round(product.baseRent * 1.2)}<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mo</span>
+                    ₹{Math.round(product.baseRent * 1.2)}<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mo</span>
                   </h3>
                 </div>
               </div>
@@ -208,7 +208,7 @@ export const ProductDetailView = ({ navigate, productId }) => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', fontWeight: 'bold' }}>
-                    ${Math.round(product.baseRent * 1.4)}<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mo</span>
+                    ₹{Math.round(product.baseRent * 1.4)}<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mo</span>
                   </h3>
                 </div>
               </div>
@@ -221,19 +221,19 @@ export const ProductDetailView = ({ navigate, productId }) => {
               <div className="flex-between">
                 <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Monthly Rental Cost:</span>
                 <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--primary)' }}>
-                  ${currentMonthlyRent}/mo
+                  ₹{currentMonthlyRent}/mo
                 </span>
               </div>
               <div className="flex-between">
                 <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Refundable Security Deposit:</span>
                 <span style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--text-primary)' }}>
-                  ${product.securityDeposit}
+                  ₹{product.securityDeposit}
                 </span>
               </div>
               <div className="flex-between" style={{ borderTop: '1px solid var(--border)', paddingTop: '10px', marginTop: '4px' }}>
                 <span style={{ fontSize: '0.9rem', fontWeight: '600' }}>Due Today (Deposit + 1st Month):</span>
                 <span style={{ fontSize: '1.30rem', fontWeight: '800', color: 'var(--accent)' }}>
-                  ${currentMonthlyRent + product.securityDeposit}
+                  ₹{currentMonthlyRent + product.securityDeposit}
                 </span>
               </div>
             </div>

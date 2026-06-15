@@ -9,7 +9,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
   // Filters State
   const [selectedCategory, setSelectedCategory] = useState(initialFilters.category || 'all');
   const [selectedSubCategory, setSelectedSubCategory] = useState(initialFilters.subCategory || 'all');
-  const [maxRent, setMaxRent] = useState(100);
+  const [maxRent, setMaxRent] = useState(10000);
   const [onlyInStock, setOnlyInStock] = useState(false);
   const [sortBy, setSortBy] = useState('popular');
 
@@ -67,7 +67,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
   const clearAllFilters = () => {
     setSelectedCategory('all');
     setSelectedSubCategory('all');
-    setMaxRent(100);
+    setMaxRent(10000);
     setOnlyInStock(false);
     onSearchChange('');
     setSortBy('popular');
@@ -151,19 +151,20 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
             <div style={{ marginBottom: '24px', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
               <div className="flex-between" style={{ marginBottom: '8px' }}>
                 <h4 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Max Monthly Rent</h4>
-                <span style={{ fontWeight: 'bold', color: 'var(--primary)' }}>${maxRent}/mo</span>
+                <span style={{ fontWeight: 'bold', color: 'var(--primary)' }}>₹{maxRent}/mo</span>
               </div>
               <input 
                 type="range" 
-                min="10" 
-                max="100" 
+                min="500" 
+                max="10000" 
+                step="100"
                 value={maxRent}
                 onChange={(e) => setMaxRent(Number(e.target.value))}
                 style={{ width: '100%', accentColor: 'var(--primary)' }}
               />
               <div className="flex-between" style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '4px' }}>
-                <span>$10/mo</span>
-                <span>$100/mo</span>
+                <span>₹500/mo</span>
+                <span>₹10,000/mo</span>
               </div>
             </div>
 
@@ -259,9 +260,9 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
                       <div>
                         <span style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Rents from</span>
                         <h3 style={{ fontSize: '1.3rem', color: 'var(--primary)', fontWeight: '800' }}>
-                          ${product.baseRent}<span style={{ fontSize: '0.85rem', fontWeight: 'normal' }}>/mo</span>
+                          ₹{product.baseRent}<span style={{ fontSize: '0.85rem', fontWeight: 'normal' }}>/mo</span>
                         </h3>
-                        <span style={{ fontSize: '0.7rem', color: 'var(--text-tertiary)' }}>Deposit: ${product.securityDeposit}</span>
+                        <span style={{ fontSize: '0.7rem', color: 'var(--text-tertiary)' }}>Deposit: ₹{product.securityDeposit}</span>
                       </div>
                       <button 
                         className={`btn ${product.stock === 0 ? 'btn-secondary' : 'btn-primary'} btn-sm`}
