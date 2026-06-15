@@ -9,7 +9,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
   // Filters State
   const [selectedCategory, setSelectedCategory] = useState(initialFilters.category || 'all');
   const [selectedSubCategory, setSelectedSubCategory] = useState(initialFilters.subCategory || 'all');
-  const [maxRent, setMaxRent] = useState(10000);
+  const [maxRent, setMaxRent] = useState(5000);
   const [onlyInStock, setOnlyInStock] = useState(false);
   const [sortBy, setSortBy] = useState('popular');
 
@@ -67,7 +67,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
   const clearAllFilters = () => {
     setSelectedCategory('all');
     setSelectedSubCategory('all');
-    setMaxRent(10000);
+    setMaxRent(5000);
     setOnlyInStock(false);
     onSearchChange('');
     setSortBy('popular');
@@ -156,7 +156,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
               <input 
                 type="range" 
                 min="500" 
-                max="10000" 
+                max="5000" 
                 step="100"
                 value={maxRent}
                 onChange={(e) => setMaxRent(Number(e.target.value))}
@@ -164,7 +164,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
               />
               <div className="flex-between" style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '4px' }}>
                 <span>₹500/mo</span>
-                <span>₹10,000/mo</span>
+                <span>₹5,000/mo</span>
               </div>
             </div>
 

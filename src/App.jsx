@@ -12,7 +12,7 @@ import CartView from './views/CartView';
 import UserDashboard from './views/UserDashboard';
 import AdminDashboard from './views/AdminDashboard';
 
-const APP_DATA_VERSION = 'v2-india-cities';
+const APP_DATA_VERSION = 'v3-inr-prices';
 
 // Clear stale localStorage data when app version changes
 if (localStorage.getItem('rentease_data_version') !== APP_DATA_VERSION) {
