@@ -96,14 +96,14 @@ const DIRECT_PRODUCT_IMAGES = {
   'prod-4': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&auto=format&fit=crop&q=80', // Fridge
   'prod-5': 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&auto=format&fit=crop&q=80', // Washing Machine
   'prod-6': 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&auto=format&fit=crop&q=80', // TV
-  'prod-7': 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&auto=format&fit=crop&q=80', // Samsung Microwave
-  'prod-8': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80', // Voltas AC
-  'prod-9': 'https://images.unsplash.com/photo-1563789031959-4c0a7e72ee7d?w=800&auto=format&fit=crop&q=80', // Kent Purifier
-  'prod-10': 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&auto=format&fit=crop&q=80', // Havells Geyser
-  'prod-11': 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop&q=80', // IFB Microwave
-  'prod-12': 'https://images.unsplash.com/photo-1631545806609-35a8cbec1a9a?w=800&auto=format&fit=crop&q=80', // LG AC
-  'prod-13': 'https://images.unsplash.com/photo-1523362628745-0c100150b504?w=800&auto=format&fit=crop&q=80', // Aquaguard Purifier
-  'prod-14': 'https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&auto=format&fit=crop&q=80', // Bajaj Geyser
+  'prod-7': '/images/microwave-samsung.png', // Samsung Microwave (Generated)
+  'prod-8': '/images/ac-voltas.png', // Voltas AC (Generated)
+  'prod-9': '/images/purifier-kent.png', // Kent Purifier (Generated)
+  'prod-10': '/images/geyser-havells.png', // Havells Geyser (Generated)
+  'prod-11': '/images/microwave-ifb.png', // IFB Microwave (Generated)
+  'prod-12': '/images/ac-lg.png', // LG AC (Generated)
+  'prod-13': '/images/purifier-aquaguard.png', // Aquaguard Purifier (Generated)
+  'prod-14': '/images/geyser-bajaj.png', // Bajaj Geyser (Generated)
 };
 
 export const ProductImage = ({ subCategory, productId, style = {}, className = '' }) => {
