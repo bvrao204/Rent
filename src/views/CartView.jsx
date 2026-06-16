@@ -213,7 +213,7 @@ export const CartView = ({ navigate }) => {
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {cart.map(item => (
                   <div key={item.id} className="cart-item-row">
-                    <ProductImage subCategory={item.product.subCategory} productId={item.product.id} style={{ height: '70px', padding: '5px' }} />
+                    <ProductImage subCategory={item.product.subCategory} productId={item.product.id} stock={item.product.stock} style={{ height: '70px', padding: '5px' }} />
                     <div>
                       <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '4px' }}>
                         {item.product.name}

@@ -116,7 +116,7 @@ export const ProductDetailView = ({ navigate, productId }) => {
         {/* Left Column: Product Vector Image & Spec List */}
         <div>
           <div className="glass-card" style={{ padding: '30px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <ProductImage subCategory={product.subCategory} productId={product.id} style={{ width: '85%', height: 'auto' }} />
+            <ProductImage subCategory={product.subCategory} productId={product.id} stock={product.stock} style={{ width: '85%', height: 'auto' }} />
           </div>
           
           <div style={{ marginTop: '30px' }}>

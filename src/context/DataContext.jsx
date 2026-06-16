@@ -184,6 +184,58 @@ const INITIAL_PRODUCTS = [
     stock: 15,
     features: ['15L storage capacity', 'Titanium Armour technology inner tank', 'Swirl Flow technology for 20% more hot water', 'Multiple safety systems', 'BEE 4-Star energy efficiency rating'],
     description: 'A highly dependable and budget-friendly water heater from Bajaj. Features Titanium Armour coating to prevent rust and corrosion in hard water areas.'
+  },
+  {
+    id: 'prod-15',
+    name: 'LG 260L 3-Star Double Door Refrigerator',
+    category: 'appliance',
+    subCategory: 'fridge',
+    baseRent: 2699,
+    securityDeposit: 7999,
+    rating: 4.8,
+    reviewsCount: 19,
+    stock: 0,
+    features: ['Smart Inverter Compressor', 'Multi Air Flow', 'Auto Smart Connect', 'Toughened Glass Shelves', 'Moist \'N\' Fresh lattice pattern box'],
+    description: 'Perfect for medium-sized families. The LG Double Door Refrigerator keeps your food fresh and drinks chilled with maximum energy efficiency.'
+  },
+  {
+    id: 'prod-16',
+    name: 'Samsung 7kg Fully Automatic Top Load Washing Machine',
+    category: 'appliance',
+    subCategory: 'washing-machine',
+    baseRent: 1699,
+    securityDeposit: 4999,
+    rating: 4.7,
+    reviewsCount: 31,
+    stock: 0,
+    features: ['Eco Bubble technology', 'Digital Inverter motor', 'Magic Filter for lint removal', 'Quick Wash program', 'Diamond drum design'],
+    description: 'Make laundry effortless. This Samsung top load washer delivers a powerful wash performance while saving energy and water.'
+  },
+  {
+    id: 'prod-17',
+    name: 'OnePlus 32-inch Y Series HD Smart LED TV',
+    category: 'appliance',
+    subCategory: 'tv',
+    baseRent: 999,
+    securityDeposit: 2999,
+    rating: 4.6,
+    reviewsCount: 55,
+    stock: 12,
+    features: ['HD Resolution (1366x768)', 'Dolby Audio (20W output)', 'OxygenPlay content platform', 'Bezel-less design', 'Chromecast built-in'],
+    description: 'A perfect compact television for your bedroom or studio apartment. Delivers crisp audio-visual clarity and smart connectivity.'
+  },
+  {
+    id: 'prod-18',
+    name: 'Sony Bravia 55-inch 4K Ultra HD Smart LED Google TV',
+    category: 'appliance',
+    subCategory: 'tv',
+    baseRent: 3499,
+    securityDeposit: 11999,
+    rating: 4.9,
+    reviewsCount: 73,
+    stock: 0,
+    features: ['4K Ultra HD (3840x2160)', 'X1 4K Processor', 'Google TV interface', 'Dolby Audio + Bass Reflex speaker', 'Apple AirPlay support'],
+    description: 'Immerse yourself in cinematic home entertainment. Sony\'s premium 4K TV brings exceptional color depth, smart voice control, and powerful speakers.'
   }
 ];
 

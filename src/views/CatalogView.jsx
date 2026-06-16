@@ -223,7 +223,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
                   onClick={() => navigate('product-detail', { productId: product.id })}
                 >
                   <div style={{ position: 'relative' }}>
-                    <ProductImage subCategory={product.subCategory} productId={product.id} />
+                    <ProductImage subCategory={product.subCategory} productId={product.id} stock={product.stock} />
                     {product.stock === 0 && (
                       <span className="badge badge-danger" style={{ position: 'absolute', top: '10px', left: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
                         Out of Stock

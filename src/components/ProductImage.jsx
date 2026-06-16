@@ -104,9 +104,13 @@ const DIRECT_PRODUCT_IMAGES = {
   'prod-12': '/images/ac-lg.png', // LG AC (Generated)
   'prod-13': '/images/purifier-aquaguard.png', // Aquaguard Purifier (Generated)
   'prod-14': '/images/geyser-bajaj.png', // Bajaj Geyser (Generated)
+  'prod-15': '/images/fridge-lg.png', // LG Refrigerator (Generated)
+  'prod-16': '/images/washer-samsung.png', // Samsung Washer (Generated)
+  'prod-17': '/images/tv-oneplus.png', // OnePlus TV (Generated)
+  'prod-18': '/images/tv-sony.png', // Sony TV (Generated)
 };
 
-export const ProductImage = ({ subCategory, productId, style = {}, className = '' }) => {
+export const ProductImage = ({ subCategory, productId, stock, style = {}, className = '' }) => {
   const key       = (subCategory || 'bed').toLowerCase();
   const directUrl = DIRECT_PRODUCT_IMAGES[productId];
   
@@ -208,6 +212,33 @@ export const ProductImage = ({ subCategory, productId, style = {}, className = '
           background: 'linear-gradient(transparent,rgba(0,0,0,0.12))',
           pointerEvents: 'none',
         }} />
+      )}
+
+      {/* Out of Stock Overlay */}
+      {stock === 0 && (
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'rgba(15, 23, 42, 0.45)',
+          backdropFilter: 'blur(3px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          pointerEvents: 'none',
+        }}>
+          <span style={{
+            background: 'var(--danger, #dc2626)',
+            color: 'white',
+            fontWeight: 800,
+            fontSize: '0.85rem',
+            letterSpacing: '1.5px',
+            textTransform: 'uppercase',
+            padding: '6px 16px',
+            borderRadius: '4px',
+            boxShadow: '0 4px 10px rgba(220, 38, 38, 0.35)',
+            transform: 'rotate(-5deg)',
+            fontFamily: 'Outfit, sans-serif'
+          }}>
+            Out of Stock
+          </span>
+        </div>
       )}
     </div>
   );
