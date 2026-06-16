@@ -132,6 +132,58 @@ const INITIAL_PRODUCTS = [
     stock: 18,
     features: ['15L storage capacity', '5-Star BEE rating', 'PUF insulation — stays hot for 24 hrs', 'Thermostat with overheat protection', 'Anti-siphon valve for safety'],
     description: 'Never run out of hot water again. The Havells Adonia 15L storage geyser heats water quickly and retains temperature for up to 24 hours, making it energy-efficient. Built with a corrosion-proof inner tank and multi-level safety protection for worry-free use.'
+  },
+  {
+    id: 'prod-11',
+    name: 'IFB 20L Solo Microwave Oven (20S1)',
+    category: 'appliance',
+    subCategory: 'microwave',
+    baseRent: 599,
+    securityDeposit: 1499,
+    rating: 4.6,
+    reviewsCount: 18,
+    stock: 10,
+    features: ['20L capacity perfect for small families', 'Solo Microwave mode for reheating/defrosting', '800W power output', '5 power levels', 'Jog dial controls for durability'],
+    description: 'A compact, highly reliable microwave oven from IFB. Ideal for simple reheating, defrosting, and quick cooking in bachelor pads or compact kitchens.'
+  },
+  {
+    id: 'prod-12',
+    name: 'LG 1.5 Ton 5-Star Dual Inverter Split AC',
+    category: 'appliance',
+    subCategory: 'ac',
+    baseRent: 3999,
+    securityDeposit: 14999,
+    rating: 4.9,
+    reviewsCount: 42,
+    stock: 8,
+    features: ['1.5 Ton capacity', '5-Star BEE energy efficiency', 'Dual inverter compressor with AI Convertible 6-in-1 cooling', 'ADC sensors for safety', 'HD filter with anti-virus protection'],
+    description: 'Beat the heat with LG\'s high-end Dual Inverter AC. The 6-in-1 convertible cooling modes allow you to adjust the cooling capacity as per your room occupancy and save electricity.'
+  },
+  {
+    id: 'prod-13',
+    name: 'Aquaguard Ritz RO+UV+Active Copper Water Purifier',
+    category: 'appliance',
+    subCategory: 'water-purifier',
+    baseRent: 899,
+    securityDeposit: 2499,
+    rating: 4.7,
+    reviewsCount: 29,
+    stock: 12,
+    features: ['RO+UV purification technology', 'Active Copper Zinc Booster technology', 'Stainless steel storage tank (5.5L)', 'Saves up to 60% water', 'LED indicators for purification status'],
+    description: 'Experience the goodness of copper and zinc in pure drinking water. The Aquaguard Ritz features a durable stainless steel tank and advanced purification stages that ensure your family gets healthy, mineral-rich water.'
+  },
+  {
+    id: 'prod-14',
+    name: 'Bajaj New Shakti Neo 15L Storage Geyser',
+    category: 'appliance',
+    subCategory: 'geyser',
+    baseRent: 499,
+    securityDeposit: 1199,
+    rating: 4.5,
+    reviewsCount: 21,
+    stock: 15,
+    features: ['15L storage capacity', 'Titanium Armour technology inner tank', 'Swirl Flow technology for 20% more hot water', 'Multiple safety systems', 'BEE 4-Star energy efficiency rating'],
+    description: 'A highly dependable and budget-friendly water heater from Bajaj. Features Titanium Armour coating to prevent rust and corrosion in hard water areas.'
   }
 ];
 
