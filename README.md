@@ -46,6 +46,29 @@ RentEase is a modern, state-of-the-art responsive single-page web application de
 
 ---
 
+## 💻 Frontend Implementation Details
+
+### 1. Single Page Application (SPA) Routing & Architecture
+- **State-Based Routing**: Configured inside [App.jsx](file:///d:/farw/Rent/src/App.jsx) via reactive state variables (`currentView` and `viewParams`). It bypasses full-page reloads to deliver instant, smooth views.
+- **Vite Integration**: Provides fast hot module reloading (HMR) and optimized client-side roll-up builds.
+
+### 2. Global State Management (Context API)
+- **Session Auth Management**: [AuthContext.jsx](file:///d:/farw/Rent/src/context/AuthContext.jsx) manages customer and administrator login states, registration flows, and user profiles.
+- **Inventory & Transaction Context**: [DataContext.jsx](file:///d:/farw/Rent/src/context/DataContext.jsx) holds the central mock databases and provides handlers for cart transactions, product creation, support tickets, and location coverage.
+- **Automatic Browser Database Sync**: Leverages `useEffect` state triggers to write data dynamically to `localStorage`, enabling persistency across browser page refreshes.
+
+### 3. Custom Vanilla CSS Styling
+- **Design Tokens**: Standardized CSS variables inside [index.css](file:///d:/farw/Rent/src/index.css) define the premium dark/light mode palette (Slate, Indigo, Teal) and typography (Outfit and Inter).
+- **Glassmorphic Cards**: Panels use backdrops (`backdrop-filter: blur(16px)`) with thin borders and soft box-shadows.
+- **Hover & Spinner Keyframes**: Interactive micro-animations for card lifting, button clicks, and loader spinners (`piSpin`).
+
+### 4. Advanced Frontend Features
+- **Dynamic Fallback Image Chains**: [ProductImage.jsx](file:///d:/farw/Rent/src/components/ProductImage.jsx) maps direct Gemini-generated local assets first, and handles network failovers cleanly with sequential fallbacks.
+- **Out-of-Stock Overlay**: Automatically renders a dark glassmorphic mask with a tilted `-5deg` red "OUT OF STOCK" stamp on any card when a product's stock is zero.
+- **Real-Time Client-Side Aggregation**: Computes key operational statistics (such as Monthly Recurring Revenue, product utilization, and active renters) client-side in real-time.
+
+---
+
 ## 📂 Project Directory Structure
 
 ```text
