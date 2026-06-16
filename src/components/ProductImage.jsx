@@ -9,64 +9,64 @@ import React, { useState, useEffect } from 'react';
  */
 const IMAGE_CHAINS = {
   bed: [
-    'https://loremflickr.com/600/400/bedroom,bed?lock=12',
     'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/bed42/600/400',
+    'https://loremflickr.com/600/400/bedroom,bed?lock=12',
   ],
   sofa: [
-    'https://loremflickr.com/600/400/sofa,couch,living-room?lock=7',
     'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/sofa42/600/400',
+    'https://loremflickr.com/600/400/sofa,couch,living-room?lock=7',
   ],
   table: [
-    'https://loremflickr.com/600/400/dining,table,furniture?lock=5',
     'https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/table42/600/400',
+    'https://loremflickr.com/600/400/dining,table,furniture?lock=5',
   ],
   fridge: [
-    'https://loremflickr.com/600/400/refrigerator,fridge,appliance?lock=3',
     'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/fridge42/600/400',
+    'https://loremflickr.com/600/400/refrigerator,fridge,appliance?lock=3',
   ],
   'washing-machine': [
-    'https://loremflickr.com/600/400/washing,machine,laundry?lock=9',
     'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/washer42/600/400',
+    'https://loremflickr.com/600/400/washing,machine,laundry?lock=9',
   ],
   tv: [
-    'https://loremflickr.com/600/400/television,smart-tv,screen?lock=15',
     'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/tv42/600/400',
+    'https://loremflickr.com/600/400/television,smart-tv,screen?lock=15',
   ],
   microwave: [
-    'https://loremflickr.com/600/400/microwave,oven,kitchen?lock=21',
     'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1556909172-89cf861786e8?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/microwave42/600/400',
+    'https://loremflickr.com/600/400/microwave,oven,kitchen?lock=21',
   ],
   ac: [
-    'https://loremflickr.com/600/400/air,conditioner,cooling?lock=18',
     'https://images.unsplash.com/photo-1631545806609-35a8cbec1a9a?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1557170083-8b5e39eca3bb?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/ac42/600/400',
+    'https://loremflickr.com/600/400/air,conditioner,cooling?lock=18',
   ],
   'water-purifier': [
-    'https://loremflickr.com/600/400/water,purifier,filter?lock=24',
     'https://images.unsplash.com/photo-1544070078-a212eda27b49?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1563789031959-4c0a7e72ee7d?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/purifier42/600/400',
+    'https://loremflickr.com/600/400/water,purifier,filter?lock=24',
   ],
   geyser: [
-    'https://loremflickr.com/600/400/water,heater,geyser,bathroom?lock=27',
     'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/geyser42/600/400',
+    'https://loremflickr.com/600/400/water,heater,geyser,bathroom?lock=27',
   ],
 };
 
@@ -172,7 +172,6 @@ export const ProductImage = ({ subCategory, productId, style = {}, className = '
           key={chain[urlIndex]}   // force remount when URL changes
           src={chain[urlIndex]}
           alt={key}
-          crossOrigin="anonymous"
           onLoad={() => setLoaded(true)}
           onError={handleError}
           style={{
