@@ -92,7 +92,7 @@ const CATEGORY_EMOJI = {
 const DIRECT_PRODUCT_IMAGES = {
   'prod-1': 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&auto=format&fit=crop&q=80', // Bed
   'prod-2': 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=80', // Sofa
-  'prod-3': '/images/dining-table-v2.png', // Nordic Dining Table (Generated v2)
+  'prod-3': '/images/dining-table-user.png', // Nordic Dining Table (User Uploaded)
   'prod-4': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&auto=format&fit=crop&q=80', // Fridge
   'prod-5': 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&auto=format&fit=crop&q=80', // Washing Machine
   'prod-6': 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&auto=format&fit=crop&q=80', // TV
