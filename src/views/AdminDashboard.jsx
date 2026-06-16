@@ -327,9 +327,13 @@ export const AdminDashboard = ({ navigate }) => {
                           </>
                         ) : (
                           <>
-                            <option value="fridge">Fridge</option>
+                            <option value="fridge">Fridge / Refrigerator</option>
                             <option value="washing-machine">Washing Machine</option>
-                            <option value="tv">TV</option>
+                            <option value="tv">TV / Television</option>
+                            <option value="microwave">Microwave Oven</option>
+                            <option value="ac">Air Conditioner (AC)</option>
+                            <option value="water-purifier">Water Purifier (RO)</option>
+                            <option value="geyser">Water Heater / Geyser</option>
                           </>
                         )}
                       </select>

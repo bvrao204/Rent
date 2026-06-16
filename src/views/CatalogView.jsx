@@ -25,9 +25,9 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
 
   // Derived categories & subcategories from active list
   const subCategoriesByCategory = {
-    all: ['bed', 'sofa', 'table', 'fridge', 'washing-machine', 'tv'],
+    all: ['bed', 'sofa', 'table', 'fridge', 'washing-machine', 'tv', 'microwave', 'ac', 'water-purifier', 'geyser'],
     furniture: ['bed', 'sofa', 'table'],
-    appliance: ['fridge', 'washing-machine', 'tv']
+    appliance: ['fridge', 'washing-machine', 'tv', 'microwave', 'ac', 'water-purifier', 'geyser']
   };
 
   // Reset category will also reset subcategory if incompatible

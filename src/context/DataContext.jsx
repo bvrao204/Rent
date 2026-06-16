@@ -80,6 +80,58 @@ const INITIAL_PRODUCTS = [
     stock: 15,
     features: ['Ultra HD 4K resolution', 'Dolby Digital audio quality', 'Built-in Netflix/YouTube/Prime Video', '3x HDMI, 2x USB ports'],
     description: 'Experience immersive entertainment from the comfort of your rented home. With stellar 4K resolution, deep contrast levels, and seamless smart-TV interfaces, casting and streaming your favorite shows has never been simpler.'
+  },
+  {
+    id: 'prod-7',
+    name: 'Samsung 28L Convection Microwave Oven',
+    category: 'appliance',
+    subCategory: 'microwave',
+    baseRent: 999,
+    securityDeposit: 2999,
+    rating: 4.7,
+    reviewsCount: 28,
+    stock: 14,
+    features: ['28L large capacity', 'Convection + Grill + Microwave modes', '900W power output', 'Auto-cook menu with 150 presets', 'Child safety lock'],
+    description: 'Cook, grill, and bake with one smart appliance. The Samsung 28L Convection Microwave brings versatile cooking modes to your rental kitchen. Features auto-cook programs, a ceramic enamel interior for easy cleaning, and an eco mode for energy savings.'
+  },
+  {
+    id: 'prod-8',
+    name: 'Voltas 1.5 Ton 5-Star Inverter Split AC',
+    category: 'appliance',
+    subCategory: 'ac',
+    baseRent: 3499,
+    securityDeposit: 12999,
+    rating: 4.9,
+    reviewsCount: 56,
+    stock: 9,
+    features: ['1.5 Ton capacity for rooms up to 180 sq ft', '5-Star BEE energy rating', 'Inverter compressor (saves 50% power)', 'Auto-clean + Wi-Fi control', 'Turbo cool in 60 seconds'],
+    description: 'Beat the Indian summer heat without the burden of owning an AC. This Voltas inverter split AC cools your room rapidly, adapts power automatically to save electricity, and self-cleans its filters — all managed remotely via the SmartDiagnosis app.'
+  },
+  {
+    id: 'prod-9',
+    name: 'Kent Grand+ RO+UV Water Purifier (8L)',
+    category: 'appliance',
+    subCategory: 'water-purifier',
+    baseRent: 799,
+    securityDeposit: 1999,
+    rating: 4.8,
+    reviewsCount: 67,
+    stock: 20,
+    features: ['Multi-stage RO+UV+UF+TDS control', '8L storage tank', 'Purification rate: 20L per hour', 'Mineral ROTO Technology', 'Zero water wastage model'],
+    description: 'Drink safe, mineral-rich water every day. The Kent Grand+ uses multi-stage purification with RO, UV, and UF filtration to remove bacteria, viruses, dissolved salts, and heavy metals. Perfect for Indian municipal and borewell water sources.'
+  },
+  {
+    id: 'prod-10',
+    name: 'Havells Adonia 15L Storage Geyser',
+    category: 'appliance',
+    subCategory: 'geyser',
+    baseRent: 599,
+    securityDeposit: 1499,
+    rating: 4.6,
+    reviewsCount: 33,
+    stock: 18,
+    features: ['15L storage capacity', '5-Star BEE rating', 'PUF insulation — stays hot for 24 hrs', 'Thermostat with overheat protection', 'Anti-siphon valve for safety'],
+    description: 'Never run out of hot water again. The Havells Adonia 15L storage geyser heats water quickly and retains temperature for up to 24 hours, making it energy-efficient. Built with a corrosion-proof inner tank and multi-level safety protection for worry-free use.'
   }
 ];
 
