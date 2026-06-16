@@ -89,27 +89,49 @@ const CATEGORY_EMOJI = {
   microwave: '📡', ac: '❄️', 'water-purifier': '💧', geyser: '🚿',
 };
 
-export const ProductImage = ({ subCategory, productId, style = {}, className = '' }) => {
-  const key      = (subCategory || 'bed').toLowerCase();
-  const chain    = IMAGE_CHAINS[key] || IMAGE_CHAINS['bed'];
-  const gradient = CATEGORY_GRADIENTS[key] || CATEGORY_GRADIENTS['bed'];
-  const emoji    = CATEGORY_EMOJI[key] || '📦';
+const DIRECT_PRODUCT_IMAGES = {
+  'prod-1': 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&auto=format&fit=crop&q=80', // Bed
+  'prod-2': 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=80', // Sofa
+  'prod-3': 'https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=800&auto=format&fit=crop&q=80', // Table
+  'prod-4': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&auto=format&fit=crop&q=80', // Fridge
+  'prod-5': 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&auto=format&fit=crop&q=80', // Washing Machine
+  'prod-6': 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&auto=format&fit=crop&q=80', // TV
+  'prod-7': 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&auto=format&fit=crop&q=80', // Samsung Microwave
+  'prod-8': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80', // Voltas AC
+  'prod-9': 'https://images.unsplash.com/photo-1563789031959-4c0a7e72ee7d?w=800&auto=format&fit=crop&q=80', // Kent Purifier
+  'prod-10': 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&auto=format&fit=crop&q=80', // Havells Geyser
+  'prod-11': 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop&q=80', // IFB Microwave
+  'prod-12': 'https://images.unsplash.com/photo-1631545806609-35a8cbec1a9a?w=800&auto=format&fit=crop&q=80', // LG AC
+  'prod-13': 'https://images.unsplash.com/photo-1523362628745-0c100150b504?w=800&auto=format&fit=crop&q=80', // Aquaguard Purifier
+  'prod-14': 'https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&auto=format&fit=crop&q=80', // Bajaj Geyser
+};
 
-  // Deterministic starting index based on productId
-  const startIdx = productId
-    ? productId.split('').reduce((s, c) => s + c.charCodeAt(0), 0) % 3  // stay within Unsplash range
-    : 0;
+export const ProductImage = ({ subCategory, productId, style = {}, className = '' }) => {
+  const key       = (subCategory || 'bed').toLowerCase();
+  const directUrl = DIRECT_PRODUCT_IMAGES[productId];
+  
+  const rawChain  = IMAGE_CHAINS[key] || IMAGE_CHAINS['bed'];
+  const chain     = directUrl ? [directUrl, ...rawChain] : rawChain;
+  
+  const gradient  = CATEGORY_GRADIENTS[key] || CATEGORY_GRADIENTS['bed'];
+  const emoji     = CATEGORY_EMOJI[key] || '📦';
+
+  // If there's a direct URL, always start at index 0 (which is the directUrl).
+  // Otherwise, use a deterministic index to shuffle general category images.
+  const startIdx  = directUrl ? 0 : (productId
+    ? productId.split('').reduce((s, c) => s + c.charCodeAt(0), 0) % 3
+    : 0);
 
   const [urlIndex, setUrlIndex] = useState(startIdx);
   const [loaded,   setLoaded]   = useState(false);
   const [failed,   setFailed]   = useState(false);
 
-  // Reset when subCategory changes
+  // Reset when subCategory or productId changes
   useEffect(() => {
     setUrlIndex(startIdx);
     setLoaded(false);
     setFailed(false);
-  }, [subCategory, productId]);
+  }, [subCategory, productId, startIdx]);
 
   const handleError = () => {
     const next = urlIndex + 1;
