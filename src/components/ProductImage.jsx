@@ -21,8 +21,8 @@ const IMAGE_CHAINS = {
     'https://loremflickr.com/600/400/sofa,couch,living-room?lock=7',
   ],
   table: [
-    'https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=600&q=80&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1577140917170-285929fb55b7?w=600&q=80&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?w=600&q=80&auto=format&fit=crop',
     'https://picsum.photos/seed/table42/600/400',
     'https://loremflickr.com/600/400/dining,table,furniture?lock=5',
   ],
