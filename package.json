@@ -1,7 +1,10 @@
 {
-  "name": "rent",
+  "name": "rentease",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "B Venkateswara Rao <bvrao204@github>",
+  "license": "MIT",
+  "description": "RentEase — Premium Furniture & Appliance Rental Platform",
   "type": "module",
   "scripts": {
     "dev": "vite --host",

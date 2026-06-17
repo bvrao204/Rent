@@ -178,14 +178,41 @@ export const Footer = ({ navigate }) => {
           paddingTop: '20px',
           borderTop: '1px solid var(--border)',
           display: 'flex',
-          justifyContent: 'between',
+          justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
           gap: '16px',
           fontSize: '0.85rem'
         }}>
-          <div>
-            &copy; {new Date().getFullYear()} RentEase Platform Inc. Built with Premium Vanilla Design.
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <span>
+              © {new Date().getFullYear()} <strong style={{ color: 'var(--text-primary)' }}>RentEase</strong> — Designed &amp; Built by{' '}
+              <a
+                href="https://github.com/bvrao204"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--primary)', fontWeight: '700', textDecoration: 'none' }}
+              >
+                B Venkateswara Rao
+              </a>
+            </span>
+            <span style={{ fontSize: '0.78rem', color: 'var(--text-tertiary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                background: 'var(--success-light)',
+                color: 'var(--success)',
+                borderRadius: '4px',
+                padding: '2px 8px',
+                fontSize: '0.72rem',
+                fontWeight: '700',
+                letterSpacing: '0.04em'
+              }}>
+                MIT LICENSE
+              </span>
+              Open source — free to use and modify with attribution.
+            </span>
           </div>
           <div style={{ display: 'flex', gap: '20px' }}>
             <span style={{ cursor: 'pointer' }} onClick={() => alert('Privacy Policy')}>Privacy Policy</span>
