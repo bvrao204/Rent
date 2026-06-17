@@ -37,15 +37,15 @@ export const HomeView = ({ navigate }) => {
           <p className="hero-subtitle">
             Relocate with ease. No heavy purchases, no shipping hassles, and free maintenance. Upgrade your home style in minutes.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-            <button className="btn btn-primary" onClick={() => navigate('catalog')}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', padding: '0 16px' }}>
+            <button className="btn btn-primary" onClick={() => navigate('catalog')} style={{ flex: '1 1 auto', maxWidth: '260px', minWidth: '180px' }}>
               Browse Rental Catalog
               <ArrowRight size={18} />
             </button>
             <button className="btn btn-secondary" onClick={() => {
               const el = document.getElementById('how-it-works');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}>
+            }} style={{ flex: '1 1 auto', maxWidth: '220px', minWidth: '160px' }}>
               Learn How It Works
             </button>
           </div>
@@ -54,9 +54,10 @@ export const HomeView = ({ navigate }) => {
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '40px',
-            marginTop: '50px',
-            flexWrap: 'wrap'
+            gap: 'clamp(16px, 4vw, 40px)',
+            marginTop: '40px',
+            flexWrap: 'wrap',
+            rowGap: '16px'
           }}>
             <div style={{ textAlign: 'center' }}>
               <h3 style={{ fontSize: '2rem', color: 'var(--primary)', fontFamily: 'Outfit' }}>10k+</h3>
