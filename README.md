@@ -15,7 +15,10 @@ RentEase is a modern, state-of-the-art responsive single-page web application de
 - **Stock Tracking**: Dynamic quantity display (e.g., "Only 2 Left") and clear stock visibility tags.
 
 ### 2. Hand-Picked Image Assets
-- **Manual Selection**: High-quality, hand-picked images added manually to represent each product option accurately and maintain a clean, premium visual aesthetic.
+- **Curated Premium Imagery**: Carefully selected, high-resolution product photography that complements the high-end, designer feel of the platform.
+- **Accurate Representation**: Every piece of furniture (such as solid oak dining tables and modern sofas) and smart appliance has been individually matched to represent its specific configurations and dimensions.
+- **Optimized Performance & Scaling**: Tailored aspect ratios and lightweight configurations ensure swift loading times, crisp display, and responsive grids across all mobile and desktop layouts.
+- **Visual Consistency**: Standardized backgrounds and lighting styles across images deliver a clean, professional, and unified digital storefront experience.
 
 ### 3. Customer & Admin Portals
 - **Interactive Renter Dashboard**:
