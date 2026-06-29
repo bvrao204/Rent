@@ -14,16 +14,8 @@ RentEase is a modern, state-of-the-art responsive single-page web application de
   - **3 Months**: Base rent + 40%
 - **Stock Tracking**: Dynamic quantity display (e.g., "Only 2 Left") and clear stock visibility tags.
 
-### 2. Premium Image Asset Integration
-- **Gemini-Generated Local Assets**: High-resolution, AI-generated images for all appliances are stored locally in the `/public/images/` directory to guarantee instant loading, offline capability, and 100% accurate product representations.
-- **User Image Upload Support**: Fully compatible with custom uploaded assets (like our solid oak dining table image).
-- **4-Stage Fallback Chain**: Handles image loading robustness with sequential fallbacks on error:
-  1. Handpicked direct product mapping (local files or stable Unsplash URLs).
-  2. Generic category Unsplash fallback IDs.
-  3. Stable, seeded Picsum images.
-  4. CSS gradient emoji card placeholder (completely network-independent).
-- **CORS Immunity**: Configured without aggressive anonymous restrictions to ensure perfect browser rendering.
-- **Glassmorphic Out-of-Stock Overlay**: Out-of-stock items (`stock === 0`) are automatically styled with a dark frosted glass mask and a rotated high-contrast **"OUT OF STOCK"** banner across the image in all lists, detail sheets, and shopping carts.
+### 2. Hand-Picked Image Assets
+- **Manual Selection**: High-quality, hand-picked images added manually to represent each product option accurately and maintain a clean, premium visual aesthetic.
 
 ### 3. Customer & Admin Portals
 - **Interactive Renter Dashboard**:
