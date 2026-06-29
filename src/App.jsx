@@ -44,12 +44,45 @@ const MainAppContent = () => {
     }
   }, [darkMode]);
 
+  // Sync state-based router with browser back/forward history
+  useEffect(() => {
+    // Initialize history state on first render if not already set
+    if (!window.history.state || !window.history.state.viewName) {
+      window.history.replaceState({ viewName: 'home', params: {} }, '');
+    }
+
+    const handlePopState = (event) => {
+      if (event.state && event.state.viewName) {
+        setCurrentView(event.state.viewName);
+        setViewParams(event.state.params || {});
+      } else {
+        // Fallback to home if no state exists
+        setCurrentView('home');
+        setViewParams({});
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);
   };
 
-  // State-based router navigation function
+  // State-based router navigation function with History API integration
   const navigate = (viewName, params = {}) => {
+    const currentState = window.history.state;
+    const isSameView = currentState && 
+                       currentState.viewName === viewName && 
+                       JSON.stringify(currentState.params) === JSON.stringify(params);
+
+    if (!isSameView) {
+      window.history.pushState({ viewName, params }, '');
+    }
+
     setCurrentView(viewName);
     setViewParams(params);
     window.scrollTo({ top: 0, behavior: 'smooth' });
