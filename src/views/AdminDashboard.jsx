@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useData } from '../context/DataContext';
 import { useAuth } from '../context/AuthContext';
 import { 
@@ -11,7 +11,6 @@ import {
   Trash2, 
   CheckCircle,
   AlertCircle,
-  Wrench as WrenchIcon,
   DollarSign,
   TrendingUp,
   Activity,

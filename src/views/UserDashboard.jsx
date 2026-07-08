@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useData } from '../context/DataContext';
 import { ProductImage } from '../components/ProductImage';
 import { 
-  User, 
   Calendar, 
   Wrench, 
   History, 
   Settings, 
-  Plus, 
   LogOut, 
   AlertCircle, 
   CheckCircle, 
-  Clock,
-  ExternalLink,
   Info
 } from 'lucide-react';
 
@@ -27,7 +23,7 @@ export const UserDashboard = ({ navigate }) => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('Bangalore');
+  const [city] = useState('Bangalore');
   const [authError, setAuthError] = useState('');
 
   // Active view tab inside dashboard
@@ -121,7 +117,6 @@ export const UserDashboard = ({ navigate }) => {
 
           <div style={{ display: 'flex', borderBottom: '1px solid var(--border)', marginBottom: '20px' }}>
             <button 
-              className="tab-btn" 
               onClick={() => { setAuthTab('login'); setAuthError(''); }}
               style={{ flex: 1, padding: '10px' }}
               className={authTab === 'login' ? 'tab-btn active' : 'tab-btn'}
@@ -129,7 +124,6 @@ export const UserDashboard = ({ navigate }) => {
               Sign In
             </button>
             <button 
-              className="tab-btn" 
               onClick={() => { setAuthTab('signup'); setAuthError(''); }}
               style={{ flex: 1, padding: '10px' }}
               className={authTab === 'signup' ? 'tab-btn active' : 'tab-btn'}

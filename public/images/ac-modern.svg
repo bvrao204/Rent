@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Modern air conditioner illustration">
+  <rect width="400" height="280" rx="24" fill="#eff6ff"/>
+  <rect x="100" y="92" width="200" height="96" rx="20" fill="#3b82f6"/>
+  <rect x="118" y="108" width="164" height="64" rx="16" fill="#60a5fa"/>
+  <rect x="132" y="124" width="136" height="20" rx="10" fill="#eff6ff"/>
+  <rect x="150" y="70" width="100" height="18" rx="9" fill="#1d4ed8"/>
+  <rect x="142" y="208" width="116" height="16" rx="8" fill="#1d4ed8"/>
+  <path d="M158 164h84" stroke="#eff6ff" stroke-width="8" stroke-linecap="round"/>
+</svg>

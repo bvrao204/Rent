@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Modern water purifier illustration">
+  <rect width="400" height="280" rx="24" fill="#f0fdf4"/>
+  <rect x="140" y="80" width="120" height="120" rx="24" fill="#0f766e"/>
+  <rect x="154" y="94" width="92" height="92" rx="18" fill="#14b8a6"/>
+  <rect x="172" y="110" width="56" height="18" rx="9" fill="#ecfeff"/>
+  <rect x="172" y="138" width="56" height="18" rx="9" fill="#ecfeff"/>
+  <rect x="160" y="216" width="80" height="12" rx="6" fill="#0f766e"/>
+  <path d="M176 70c0-18 20-32 24-32s24 14 24 32" stroke="#0f766e" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * URL Fallback Chain per subcategory:
@@ -8,79 +8,29 @@ import React, { useState, useEffect } from 'react';
  * 4. Emoji gradient card (works offline, no network needed)
  */
 const IMAGE_CHAINS = {
-  bed: [
-    'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/bed42/600/400',
-    'https://loremflickr.com/600/400/bedroom,bed?lock=12',
-  ],
-  sofa: [
-    'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/sofa42/600/400',
-    'https://loremflickr.com/600/400/sofa,couch,living-room?lock=7',
-  ],
-  table: [
-    'https://images.unsplash.com/photo-1577140917170-285929fb55b7?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/table42/600/400',
-    'https://loremflickr.com/600/400/dining,table,furniture?lock=5',
-  ],
-  fridge: [
-    'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/fridge42/600/400',
-    'https://loremflickr.com/600/400/refrigerator,fridge,appliance?lock=3',
-  ],
-  'washing-machine': [
-    'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/washer42/600/400',
-    'https://loremflickr.com/600/400/washing,machine,laundry?lock=9',
-  ],
-  tv: [
-    'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/tv42/600/400',
-    'https://loremflickr.com/600/400/television,smart-tv,screen?lock=15',
-  ],
-  microwave: [
-    'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1556909172-89cf861786e8?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/microwave42/600/400',
-    'https://loremflickr.com/600/400/microwave,oven,kitchen?lock=21',
-  ],
-  ac: [
-    'https://images.unsplash.com/photo-1631545806609-35a8cbec1a9a?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1557170083-8b5e39eca3bb?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/ac42/600/400',
-    'https://loremflickr.com/600/400/air,conditioner,cooling?lock=18',
-  ],
-  'water-purifier': [
-    'https://images.unsplash.com/photo-1544070078-a212eda27b49?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1563789031959-4c0a7e72ee7d?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/purifier42/600/400',
-    'https://loremflickr.com/600/400/water,purifier,filter?lock=24',
-  ],
-  geyser: [
-    'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&auto=format&fit=crop',
-    'https://picsum.photos/seed/geyser42/600/400',
-    'https://loremflickr.com/600/400/water,heater,geyser,bathroom?lock=27',
-  ],
+  bed: ['/images/bed.png', '/images/bed2.png', '/images/bed3.png'],
+  sofa: ['/images/sofa.png', '/images/sofa2.png', '/images/sofa3.png'],
+  table: ['/images/table.png', '/images/table2.png', '/images/table3.png'],
+  fridge: ['/images/fridge.png', '/images/fridge2.png', '/images/fridge3.png'],
+  'washing-machine': ['/images/washing-machine.png', '/images/washing-machine2.png', '/images/washing-machine3.png'],
+  tv: ['/images/tv.png', '/images/tv2.png', '/images/tv3.png'],
+  microwave: ['/images/microwave.png', '/images/microwave2.png', '/images/microwave3.png'],
+  ac: ['/images/ac.png', '/images/ac2.png'],
+  'water-purifier': ['/images/water-purifier.png', '/images/water-purifier2.png'],
+  geyser: ['/images/geyser.png', '/images/geyser2.png'],
 };
 
 const CATEGORY_GRADIENTS = {
-  bed:              'linear-gradient(135deg,#c7d2fe 0%,#6366f1 100%)',
-  sofa:             'linear-gradient(135deg,#a5f3fc 0%,#0891b2 100%)',
-  table:            'linear-gradient(135deg,#fde68a 0%,#d97706 100%)',
-  fridge:           'linear-gradient(135deg,#bfdbfe 0%,#2563eb 100%)',
-  'washing-machine':'linear-gradient(135deg,#bbf7d0 0%,#16a34a 100%)',
-  tv:               'linear-gradient(135deg,#fecaca 0%,#dc2626 100%)',
-  microwave:        'linear-gradient(135deg,#fed7aa 0%,#ea580c 100%)',
-  ac:               'linear-gradient(135deg,#cffafe 0%,#06b6d4 100%)',
+  bed: 'linear-gradient(135deg,#c7d2fe 0%,#6366f1 100%)',
+  sofa: 'linear-gradient(135deg,#a5f3fc 0%,#0891b2 100%)',
+  table: 'linear-gradient(135deg,#fde68a 0%,#d97706 100%)',
+  fridge: 'linear-gradient(135deg,#bfdbfe 0%,#2563eb 100%)',
+  'washing-machine': 'linear-gradient(135deg,#bbf7d0 0%,#16a34a 100%)',
+  tv: 'linear-gradient(135deg,#fecaca 0%,#dc2626 100%)',
+  microwave: 'linear-gradient(135deg,#fed7aa 0%,#ea580c 100%)',
+  ac: 'linear-gradient(135deg,#cffafe 0%,#06b6d4 100%)',
   'water-purifier': 'linear-gradient(135deg,#d1fae5 0%,#059669 100%)',
-  geyser:           'linear-gradient(135deg,#ffe4e6 0%,#e11d48 100%)',
+  geyser: 'linear-gradient(135deg,#ffe4e6 0%,#e11d48 100%)',
 };
 
 const CATEGORY_EMOJI = {
@@ -90,65 +40,82 @@ const CATEGORY_EMOJI = {
 };
 
 const DIRECT_PRODUCT_IMAGES = {
-  // Use local public images to avoid remote duplicates/blocked requests
-  'prod-1': '/images/dining-table.png', // fallback local for bed (closest available)
-  'prod-2': '/images/dining-table-v2.png', // fallback local for sofa (closest available)
-  'prod-3': '/images/dining-table-user.png',
+  'prod-1': ['/images/bed.png'],
+  'prod-25': ['/images/bed2.png'],
+  'prod-26': ['/images/bed3.png'],
+  'prod-2': ['/images/sofa.png'],
+  'prod-27': ['/images/sofa2.png'],
+  'prod-28': ['/images/sofa3.png'],
+  'prod-3': ['/images/table.png'],
+  'prod-29': ['/images/table2.png'],
+  'prod-30': ['/images/table3.png'],
+  'prod-4': ['/images/fridge.png'],
+  'prod-15': ['/images/fridge-lg.png'],
+  'prod-19': ['/images/fridge3.png'],
+  'prod-5': ['/images/washing-machine.png'],
+  'prod-16': ['/images/washer-samsung.png'],
+  'prod-21': ['/images/washing-machine2.png'],
+  'prod-6': ['/images/tv.png'],
+  'prod-17': ['/images/tv-oneplus.png'],
+  'prod-18': ['/images/tv-sony.png'],
+  'prod-7': ['/images/microwave-samsung.png'],
+  'prod-11': ['/images/microwave-ifb.png'],
+  'prod-22': ['/images/microwave2.png'],
+  'prod-8': ['/images/ac-voltas.png'],
+  'prod-12': ['/images/ac-lg.png'],
+  'prod-20': ['/images/ac2.png'],
+  'prod-9': ['/images/purifier-kent.png'],
+  'prod-13': ['/images/purifier-aquaguard.png'],
+  'prod-23': ['/images/water-purifier.png'],
+  'prod-10': ['/images/geyser-havells.png'],
+  'prod-14': ['/images/geyser-bajaj.png'],
+  'prod-24': ['/images/geyser.png'],
+};
 
-  'prod-4': '/images/fridge-lg.png',
-  'prod-5': '/images/washer-samsung.png',
-  'prod-6': '/images/tv-oneplus.png',
+const toPublicAssetUrl = (assetPath) => {
+  if (!assetPath) return assetPath;
+  if (/^https?:\/\//.test(assetPath)) return assetPath;
 
-  'prod-7': '/images/microwave-samsung.png',
-  'prod-8': '/images/ac-voltas.png',
-  'prod-9': '/images/purifier-kent.png',
-  'prod-10': '/images/geyser-havells.png',
-
-  'prod-11': '/images/microwave-ifb.png',
-  'prod-12': '/images/ac-lg.png',
-  'prod-13': '/images/purifier-aquaguard.png',
-  'prod-14': '/images/geyser-bajaj.png',
-  'prod-15': '/images/fridge-lg.png',
-  'prod-16': '/images/washer-samsung.png',
-  'prod-17': '/images/tv-oneplus.png',
-  'prod-18': '/images/tv-sony.png',
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  return `${normalizedBase}${assetPath.replace(/^\//, '')}`;
 };
 
 export const ProductImage = ({ subCategory, productId, stock, style = {}, className = '' }) => {
-  const key       = (subCategory || 'bed').toLowerCase();
-  const directUrl = DIRECT_PRODUCT_IMAGES[productId];
-  
-  const rawChain  = IMAGE_CHAINS[key] || IMAGE_CHAINS['bed'];
-  const chain     = directUrl ? [directUrl, ...rawChain] : rawChain;
-  
-  const gradient  = CATEGORY_GRADIENTS[key] || CATEGORY_GRADIENTS['bed'];
-  const emoji     = CATEGORY_EMOJI[key] || '📦';
+  const key = (subCategory || 'bed').toLowerCase();
+  const rawChain = IMAGE_CHAINS[key] || IMAGE_CHAINS['bed'];
 
-  // If there's a direct URL, always start at index 0 (which is the directUrl).
+  const directUrls = productId
+    ? (Array.isArray(DIRECT_PRODUCT_IMAGES[productId]) ? DIRECT_PRODUCT_IMAGES[productId] : [DIRECT_PRODUCT_IMAGES[productId]])
+      .filter(Boolean)
+      .map(url => toPublicAssetUrl(url))
+    : [];
+
+  const chain = directUrls.length ? [...directUrls, ...rawChain.map(url => toPublicAssetUrl(url))] : rawChain.map(url => toPublicAssetUrl(url));
+
+  const gradient = CATEGORY_GRADIENTS[key] || CATEGORY_GRADIENTS['bed'];
+  const emoji = CATEGORY_EMOJI[key] || '📦';
+
+  // If there are direct product images, always start with the first one.
   // Otherwise, use a deterministic index to shuffle general category images.
-  const startIdx  = directUrl ? 0 : (productId
-    ? productId.split('').reduce((s, c) => s + c.charCodeAt(0), 0) % 3
+  const startIdx = directUrls.length ? 0 : (productId
+    ? productId.split('').reduce((s, c) => s + c.charCodeAt(0), 0) % chain.length
     : 0);
 
   const [urlIndex, setUrlIndex] = useState(startIdx);
-  const [loaded,   setLoaded]   = useState(false);
-  const [failed,   setFailed]   = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   // Reset when subCategory or productId changes
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setUrlIndex(startIdx);
     setLoaded(false);
     setFailed(false);
   }, [subCategory, productId, startIdx]);
 
   const handleError = () => {
-    const next = urlIndex + 1;
-    if (next < chain.length) {
-      setUrlIndex(next);   // try next URL
-      setLoaded(false);
-    } else {
-      setFailed(true);     // all URLs exhausted → emoji fallback
-    }
+    setFailed(true); // Lock the image and prevent cycling to other images
   };
 
   return (
@@ -175,22 +142,30 @@ export const ProductImage = ({ subCategory, productId, stock, style = {}, classN
       )}
 
       {/* Image — progresses through chain on error */}
-      {!failed && (
-        <img
-          key={chain[urlIndex]}   // force remount when URL changes
-          src={chain[urlIndex]}
-          alt={key}
-          onLoad={() => setLoaded(true)}
-          onError={handleError}
-          style={{
-            width: '100%', height: '100%',
-            objectFit: 'cover',
-            opacity: loaded ? 1 : 0,
-            transition: 'opacity 0.4s ease',
-            display: 'block',
-          }}
-        />
-      )}
+      {!failed && (() => {
+        const currentUrl = chain[urlIndex];
+        const isAltComposition = productId && ['prod-20', 'prod-23', 'prod-24'].includes(productId);
+
+        return (
+          <img
+            key={`${productId || 'default'}-${currentUrl}`}   // force remount when product or URL changes
+            src={currentUrl}
+            alt={key}
+            onLoad={() => setLoaded(true)}
+            onError={handleError}
+            style={{
+              width: '100%', height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity 0.4s ease',
+              display: 'block',
+              backgroundColor: '#fff',
+              transform: isAltComposition ? 'scale(1.35) scaleX(-1)' : 'none',
+            }}
+          />
+        );
+      })()}
 
       {/* Emoji card — only when all URLs fail */}
       {failed && (

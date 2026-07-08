@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useData } from '../context/DataContext';
 import { ProductImage } from '../components/ProductImage';
-import { Search, SlidersHorizontal, Check, Star, RefreshCw } from 'lucide-react';
+import { SlidersHorizontal, Star, RefreshCw } from 'lucide-react';
 
 export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSearchChange }) => {
   const { products } = useData();
@@ -16,6 +16,7 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
   // Sync state if navigate sends new filters
   useEffect(() => {
     if (initialFilters.category) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSelectedCategory(initialFilters.category);
     }
     if (initialFilters.subCategory) {
@@ -213,6 +214,8 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
                 <div 
                   key={product.id} 
                   className="glass-card" 
+                  role="button"
+                  tabIndex={0}
                   style={{ 
                     display: 'flex', 
                     flexDirection: 'column', 
@@ -221,6 +224,12 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
                     opacity: product.stock === 0 ? 0.75 : 1
                   }}
                   onClick={() => navigate('product-detail', { productId: product.id })}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      navigate('product-detail', { productId: product.id });
+                    }
+                  }}
                 >
                   <div style={{ position: 'relative' }}>
                     <ProductImage subCategory={product.subCategory} productId={product.id} stock={product.stock} />
@@ -265,8 +274,13 @@ export const CatalogView = ({ navigate, initialFilters = {}, searchQuery, onSear
                         <span style={{ fontSize: '0.7rem', color: 'var(--text-tertiary)' }}>Deposit: ₹{product.securityDeposit}</span>
                       </div>
                       <button 
+                        type="button"
                         className={`btn ${product.stock === 0 ? 'btn-secondary' : 'btn-primary'} btn-sm`}
                         disabled={product.stock === 0}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          navigate('product-detail', { productId: product.id });
+                        }}
                       >
                         {product.stock === 0 ? 'Read Details' : 'Rent Now'}
                       </button>

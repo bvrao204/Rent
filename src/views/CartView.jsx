@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useData } from '../context/DataContext';
 import { useAuth } from '../context/AuthContext';
 import { ProductImage } from '../components/ProductImage';
@@ -7,11 +7,9 @@ import {
   Plus, 
   Minus, 
   ShoppingBag, 
-  Calendar, 
-  CreditCard, 
+  CreditCard,
   MapPin, 
   CheckCircle,
-  Truck,
   AlertCircle
 } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ShieldCheck, Truck, RotateCcw, HeartHandshake } from 'lucide-react';
 
 export const Footer = ({ navigate }) => {

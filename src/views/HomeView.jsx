@@ -1,20 +1,16 @@
-import React from 'react';
+
 import { useData } from '../context/DataContext';
 import { ProductImage } from '../components/ProductImage';
 import { 
   ArrowRight, 
   Tv, 
   Sofa, 
-  MapPin, 
-  Calendar, 
-  Wrench, 
   ThumbsUp,
-  Award,
   Sparkles
 } from 'lucide-react';
 
 export const HomeView = ({ navigate }) => {
-  const { products, serviceAreas } = useData();
+  const { products } = useData();
 
   // Highlight 3 popular products for home page recommendations
   const featuredProducts = products.slice(0, 3);
@@ -266,8 +262,16 @@ export const HomeView = ({ navigate }) => {
             <div 
               key={product.id} 
               className="glass-card" 
+              role="button"
+              tabIndex={0}
               style={{ display: 'flex', flexDirection: 'column', height: '100%', cursor: 'pointer' }}
               onClick={() => navigate('product-detail', { productId: product.id })}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  navigate('product-detail', { productId: product.id });
+                }
+              }}
             >
               <ProductImage subCategory={product.subCategory} productId={product.id} />
               
@@ -288,7 +292,16 @@ export const HomeView = ({ navigate }) => {
                       ₹{product.baseRent}<span style={{ fontSize: '0.85rem', fontWeight: 'normal' }}>/mo</span>
                     </h3>
                   </div>
-                  <button className="btn btn-primary btn-sm">Rent Now</button>
+                  <button 
+                    type="button"
+                    className="btn btn-primary btn-sm"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      navigate('product-detail', { productId: product.id });
+                    }}
+                  >
+                    Rent Now
+                  </button>
                 </div>
               </div>
             </div>

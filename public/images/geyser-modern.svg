@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Modern geyser illustration">
+  <rect width="400" height="280" rx="24" fill="#fdf2f8"/>
+  <rect x="120" y="78" width="160" height="124" rx="22" fill="#f43f5e"/>
+  <rect x="140" y="96" width="120" height="88" rx="16" fill="#fb7185"/>
+  <rect x="158" y="114" width="84" height="18" rx="9" fill="#fff1f2"/>
+  <rect x="158" y="142" width="84" height="18" rx="9" fill="#fff1f2"/>
+  <rect x="148" y="214" width="104" height="12" rx="6" fill="#be123c"/>
+  <path d="M154 70h92" stroke="#be123c" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AuthProvider } from './context/AuthContext';
 import { DataProvider } from './context/DataContext';
 import Navbar from './components/Navbar';
