@@ -126,5 +126,5 @@ npm run build
 ---
 
 ## 📝 Demo Login Credentials
-- **Customer Account**: `user@example.com` (Password: `password`)
-- **Administrator Account**: `admin@rentease.com` (Password: `admin`)
+- **Customer Account**: `user@example.com` (Password: `user123`)
+- **Administrator Account**: `admin@rentease.com` (Password: `admin123`)
