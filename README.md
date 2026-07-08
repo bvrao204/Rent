@@ -62,9 +62,14 @@ Current challenges faced by renters in urban environments:
 - **Manage delivery & pickup schedules**: Monitor and track all customer orders.
 - **Track product availability**: Automatic stock decrement upon successful rental.
 - **Handle maintenance requests**: View, update, and resolve customer support tickets.
-- **Manual Image Management**: All product pictures and assets are uploaded and assigned manually by the admin team (no AI or automated placeholders are used) to guarantee the highest quality visual experience.
 - **Generate reports and analytics**: Real-time KPI calculations.
 - **Manage service areas**: Add or remove available cities for delivery.
+
+### Image Asset Management
+All product images in this project are self-hosted and manually configured to ensure strict quality control.
+- **Storage Location**: The physical image files (PNGs) are securely stored in the `public/images/` directory.
+- **Mapping Logic**: The assignment of these images to specific products is managed manually via the `DIRECT_PRODUCT_IMAGES` configuration inside `src/components/ProductImage.jsx`.
+- **Zero Automation**: No automated placeholders or AI generation are used for the active inventory. Every appliance and furniture piece has been manually assigned its respective image by the admin team.
 
 ---
 
